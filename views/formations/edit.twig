@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update training</title>
+</head>
+
+<body>
+    <h1>Updating training</h1>
+
+
+<form action="/formations/{{ formation._id }}?_method=PUT" method="POST">
+    
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title" placeholder="{{formation.title}}">
+    <br>
+     <br>
+     <label for="description">Description </label>
+     <br>
+     <input type="string"  name="description" placeholder="{{formation.description}}"> 
+    <br>
+    <br>
+     <label for="startAt">Start At</label> 
+     <br>
+     <input type="date" name="startAt">
+    <br>
+    <br>
+         <label for="endAt">End At</label> 
+         <br>
+         <input type="date" name="endAt">
+    <br>
+    <br>
+     
+     <button>Update</button> 
+    
+     </form>
+</table>
+
+
+</body>
+
+</html>

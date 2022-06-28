@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All formations</title>
+</head>
+
+<body>
+    <h1>Training List</h1>
+    <table border="2">
+     <thead>
+        <th>Title</th>
+        <th>Description</th>
+        <th>start At</th>
+        <th>end at </th>
+        <th>actions</th>
+      </thead>
+       <tbody>
+    {% for formation in formations %}
+    
+    <tr>
+    
+        <td> {{formation.title}}</a> </td>
+        <td>  {{formation.description}} </td>
+        <td>  {{formation.startAt}} </td>
+        <td>  {{formation.endAt}} </td>
+        <td> 
+            <a href="/formations/{{formation._id}}/edit">Edit </a> 
+            
+            <form action="/formations/{{formation._id}}?_method=DELETE" method="POST" style="text-align: inline;">
+        <button >Delete</button>
+    </form>
+        </td>
+    </tr>
+     {% endfor %}
+      </tbody>
+    </table>
+   
+
+
+   
+
+
+
+
+
+
+
+
+</body>
+
+</html>
